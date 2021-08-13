@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.drawio": "bat",
+    "iostream": "c",
+    "string": "c",
+    "student_mangage": "c",
+    "iosfwd": "c",
+    "core": "cpp"
+  }
+}
