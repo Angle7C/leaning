@@ -4,7 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "F:\\Tool\\eigen-3.3.9"
+                "F:\\Tool\\eigen-3.3.9",
+                "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
+                "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include"
             ],
             "defines": [
                 "_DEBUG",
@@ -12,10 +14,10 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/cl.exe",
+            "compilerPath": "F:\\Tool\\GUN\\mingw64\\bin\\g++.exe" ,
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "msvc-x64"
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4

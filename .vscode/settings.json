@@ -6,5 +6,6 @@
     "student_mangage": "c",
     "iosfwd": "c",
     "core": "cpp"
-  }
+  },
+  "C_Cpp.errorSquiggles": "Enabled"
 }

@@ -1,27 +1,54 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "type": "shell",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "g++",
-            "args": [
-                "-g",
-                "${fileDirname}\\*.cpp",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I",
-                "F:\\Tool\\eigen-3.3.9"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build"
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "build",
+			"command": "g++.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin\\libopencv_world453.dll",
+				"-I","F:\\Tool\\eigen-3.3.9",
+				"-I","F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include",
+				"-I", "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
+				"-L" ,"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "shell",
+			"label": "opencv",
+			"command": "g++.exe",
+			"args": [
+				"-g",
+				"${fileDirname}\\*.cpp",
+				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin\\libopencv_world453.dll",
+				"-I","F:\\Tool\\eigen-3.3.9",
+				"-I","F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include",
+				"-I", "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
+				"-L" ,"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin",
+
+				
+			
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe"
+		}
+	]
 }
