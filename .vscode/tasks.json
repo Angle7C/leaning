@@ -8,12 +8,7 @@
 			"args": [
 				"-g",
 				"${file}",
-				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
-				"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin\\libopencv_world453.dll",
-				"-I","F:\\Tool\\eigen-3.3.9",
-				"-I","F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include",
-				"-I", "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
-				"-L" ,"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin",
+				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -32,11 +27,11 @@
 				"-g",
 				"${fileDirname}\\*.cpp",
 				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
-				"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin\\libopencv_world453.dll",
-				"-I","F:\\Tool\\eigen-3.3.9",
-				"-I","F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include",
-				"-I", "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
-				"-L" ,"F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin",
+				"-l","libopencv_world453.dll",
+				"-I","F:\\Tool\\extend\\eigen-3.3.9",
+				"-I","F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include",
+				"-I", "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
+				"-L" ,"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin",
 
 				
 			
@@ -49,6 +44,25 @@
 			],
 			"group": "build",
 			"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe"
-		}
+		},		 
+			{
+				"type": "shell",
+				"label": "build",
+				"command": "g++.exe",
+				"args": [
+					"-g",
+					"${file}",
+					"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
+					"-I","F:\\Tool\\extend\\glfw-3.3.4\\include"
+				],
+				"options": {
+					"cwd": "${fileDirname}"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build",
+				"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe"
+			},
 	]
 }

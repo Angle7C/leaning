@@ -4,9 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "F:\\Tool\\eigen-3.3.9",
-                "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
-                "F:\\Tool\\openCV\\opencv\\build\\x64\\minGW\\install\\include"
+                "F:\\Tool\\extend\\eigen-3.3.9",
+                "F:\\Tool\\extend\\glfw-3.3.4\\include",
+                "F:\\Tool\\extend\\glfw-3.3.4\\include",
             ],
             "defines": [
                 "_DEBUG",

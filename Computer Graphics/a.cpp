@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <Eigen\Eigen>  
+#include <amp.h>
 int main()
 {
 	std::cout<<cos(90/180*M_PI);
