@@ -151,7 +151,8 @@ Eigen::Vector3f texture_fragment_shader(const fragment_shader_payload& payload)
         auto La=ka.cwiseProduct(amb_light_intensity);
         auto Ld=kd.cwiseProduct(light.intensity/r) * std::max(0.0f,normal.normalized().dot(in.normalized()));
         auto h=(in+out)/r;
-        auto Ls=ks.cwiseProduct(light.intensity/r) * std::pow(std::max(0,normal.normalized().dot(h)),p)
+        auto Ls=ks.cwiseProduct(light.intensity/r) * std::pow(std::max(0.0f,normal.normalized().dot(h)),p);
+        result_color=Ls+Ld+La;
     }
 
     return result_color * 255.f;
