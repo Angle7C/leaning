@@ -8,7 +8,8 @@
 			"args": [
 				"-g",
 				"${file}",
-				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -25,16 +26,49 @@
 			"command": "g++.exe",
 			"args": [
 				"-g",
-				"${fileDirname}\\*.cpp",
-				"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
-				"-l","libopencv_world453.dll",
-				"-I","F:\\Tool\\extend\\eigen-3.3.9",
-				"-I","F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include",
-				"-I", "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
-				"-L" ,"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin",
-
 				
+				"${fileDirname}\\*.cpp",
+				"-I",
+				"F:\\Tool\\extend\\eigen-3.3.9",
+				"-I",
+				"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include",
+				"-I",
+				"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
+				
+				"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin\\libopencv_world453.dll",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-std=c++17",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe",
 			
+		},
+		{
+			"type": "shell",
+			"label": "glfw",
+			"command": "g++.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"F:\\Tool\\extend\\glfw-3.3.4\\lib-mingw-w64\\glfw3.dll",
+				"F:\\Tool\\extend\\glad\\glad.o",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-I",
+				"F:\\Tool\\extend\\glfw-3.3.4\\include",
+				"-L",
+				"F:\\Tool\\extend\\glfw-3.3.4\\lib-mingw-w64",
+				"-I",
+				"F:\\Tool\\extend\\glad\\include",
+				"-l",
+				"opengl32"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -44,25 +78,36 @@
 			],
 			"group": "build",
 			"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe"
-		},		 
-			{
-				"type": "shell",
-				"label": "build",
-				"command": "g++.exe",
-				"args": [
-					"-g",
-					"${file}",
-					"-o","${fileDirname}\\${fileBasenameNoExtension}.exe",
-					"-I","F:\\Tool\\extend\\glfw-3.3.4\\include"
-				],
-				"options": {
-					"cwd": "${fileDirname}"
-				},
-				"problemMatcher": [
-					"$gcc"
-				],
-				"group": "build",
-				"detail": "编译器: F:\\Tool\\GUN\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: clang++.exe 生成活动文件",
+			"command": "clang++.exe",
+			"args": [
+				// "-std=c++17",
+				"-g",
+				"${fileDirname}\\*.cpp",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-l",
+				"libopencv_world453.dll",
+				"-I",
+				"F:\\Tool\\extend\\eigen-3.3.9",
+				"-I",
+				"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include",
+				"-I",
+				"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include\\opencv2",
+				"-L",
+				"F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\x64\\mingw\\bin"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
 			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: F:\\Tool\\llvm\\bin\\clang++.exe"
+		}
 	]
 }

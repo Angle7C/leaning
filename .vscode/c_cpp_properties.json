@@ -6,7 +6,9 @@
                 "${workspaceFolder}/**",
                 "F:\\Tool\\extend\\eigen-3.3.9",
                 "F:\\Tool\\extend\\glfw-3.3.4\\include",
-                "F:\\Tool\\extend\\glfw-3.3.4\\include",
+                "F:\\Tool\\extend\\glad\\include",
+                "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include",
+                "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include\\opencv2"
             ],
             "defines": [
                 "_DEBUG",
@@ -14,10 +16,11 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "F:\\Tool\\GUN\\mingw64\\bin\\g++.exe" ,
+            "compilerPath": "F:\\Tool\\GUN\\mingw64\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"
+           
         }
     ],
     "version": 4

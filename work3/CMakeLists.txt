@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10)
+# project(Rasterizer)
+set(OpenCV_DIR "F:/Tool/extend/opencv/build/x64/minGW")
+set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs)
+find_package(OpenCV REQUIRED)
+
+set(CMAKE_CXX_STANDARD 17)
+add_executable(Rasterizer main.cpp rasterizer.hpp rasterizer.cpp global.hpp Triangle.hpp Triangle.cpp Texture.hpp Texture.cpp Shader.hpp OBJ_Loader.h)
+include_directories(${OpenCV_INCLUDE_DIRS})
+target_link_libraries(Rasterizer ${OpenCV_LIBS})
+#target_compile_options(Rasterizer PUBLIC -Wall -Wextra -pedantic)
