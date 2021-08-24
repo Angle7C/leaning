@@ -17,8 +17,6 @@ public:
     Texture(const std::string& name)
     {   
         cv::Mat temp = cv::imread(name);
-        // cv::namedWindow("原图");
-	    // cv::imshow("原图", temp);
         cv::cvtColor(temp, image_data, cv::COLOR_RGB2BGR);
         width = image_data.cols;
         height = image_data.rows;
@@ -28,6 +26,7 @@ public:
 
     Eigen::Vector3f getColor(float u, float v)
     {
+        
         auto u_img = u * width;
         auto v_img = (1 - v) * height;
         auto color = image_data.at<cv::Vec3b>(v_img, u_img);

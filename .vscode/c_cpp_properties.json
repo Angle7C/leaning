@@ -7,8 +7,8 @@
                 "F:\\Tool\\extend\\eigen-3.3.9",
                 "F:\\Tool\\extend\\glfw-3.3.4\\include",
                 "F:\\Tool\\extend\\glad\\include",
-                "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include",
-                "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include\\opencv2"
+                "F:\\Tool\\extend\\opencv\\build\\x64\\minGW\\install\\include"
+                
             ],
             "defines": [
                 "_DEBUG",

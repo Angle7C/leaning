@@ -281,15 +281,18 @@ void rst::rasterizer::rasterize_triangle(const Triangle& t, const std::array<Eig
 
                     if(zp<depth_buf[get_index(i,j)]){
                         
-                        auto midColor = interpolate(alpha, beta, gamma, t.color[0], t.color[1], t.color[2], 1);
+                        // auto midColor = interpolate(alpha, beta, gamma, t.color[0], t.color[1], t.color[2], 1);
+                        auto midColor = alpha*t.color[0]+beta*t.color[1]+gamma*t.color[2];
+
 					    // normal
 					    // auto midNormal = interpolate(alpha, beta, gamma, t.normal[0], t.normal[1], t.normal[2], 1).normalized();
-                        auto midNormal=0.333f*t.normal[0]+0.333f*t.normal[1]+0.333f*t.normal[2];
+                        auto midNormal=alpha*t.normal[0]+beta*t.normal[1]+gamma*t.normal[2];
 					    // texture
-					    auto midTexcoords = interpolate(alpha, beta, gamma, t.tex_coords[0], t.tex_coords[1], t.tex_coords[2], 1);
-					    // shadingcoords
+					    // auto midTexcoords = interpolate(alpha, beta, gamma, t.tex_coords[0], t.tex_coords[1], t.tex_coords[2], 1);
+					    auto midTexcoords= alpha*t.tex_coords[0]+beta*t.tex_coords[1]+gamma*t.tex_coords[2];
+                        // shadingcoords
 					    auto midshadingcoords = interpolate(alpha, beta, gamma, view_pos[0], view_pos[1], view_pos[2], 1);
-                        fragment_shader_payload playload(midColor,midNormal,t.tex_coords[0], texture ? &*texture : nullptr);
+                        fragment_shader_payload playload(midColor,midNormal.normalized(),midTexcoords, texture ? &*texture : nullptr);
                         playload.view_pos= midshadingcoords;
                         auto pixelColor=fragment_shader(playload);
                         depth_buf[get_index(i,j)]=zp;
