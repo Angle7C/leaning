@@ -26,10 +26,9 @@ Eigen::Matrix4f get_model_matrix(float rotation_angle)
     // Eigen::AngleAxisf R(rotation_angle,Eigen::Vector3f(0,0,1));
     // Eigen::Isometry3f T=Eigen::Isometry3f::Identity();
     // T.rotate(R);
-    model(0,0)=b;
-    model(0,1)=-a;
-    model(1,0)=a;
-    model(1,1)=b;
+    model<<b,-a,0,
+           a,b,0,
+           0,0,1;
     // model=T.matrix();
     // TODO: Implement this function
     // Create the model matrix for rotating the triangle around the Z axis.
